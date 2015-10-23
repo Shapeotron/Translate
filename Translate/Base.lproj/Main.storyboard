@@ -17,6 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Translate" highlightedImage="Translate" translatesAutoresizingMaskIntoConstraints="NO" id="lL2-tY-d0k">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="100" constant="600" id="gLf-X8-YNS"/>
+                                </constraints>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&lt;Text to Translate&gt;" translatesAutoresizingMaskIntoConstraints="NO" id="dii-Vg-90N">
                                 <rect key="frame" x="20" y="28" width="560" height="128"/>
                                 <animations/>
@@ -74,14 +81,6 @@
                                 <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </progressView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IXN-j4-7Ch">
-                                <rect key="frame" x="61" y="-25" width="68" height="8"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lL2-tY-d0k">
-                                <rect key="frame" x="11" y="-8" width="47" height="29"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -112,10 +111,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="311"/>
+            <point key="canvasLocation" x="338" y="368"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Translate" width="474" height="421"/>
         <image name="button_tap_deselected" width="250" height="265"/>
         <image name="button_tap_selected" width="250" height="265"/>
     </resources>
