@@ -21,6 +21,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func translate(sender: AnyObject) {
         
+        backgroundMusic?.volume = 0.5
+        backgroundMusic?.play()
+        
         buttonBeep?.play()
         
         let str = textToTranslate.text
