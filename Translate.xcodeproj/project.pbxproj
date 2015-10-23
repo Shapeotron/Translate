@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11008DFA1BDA7BCA0030191F /* ButtonTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11008DF71BDA7BCA0030191F /* ButtonTap.wav */; settings = {ASSET_TAGS = (); }; };
+		11008DFB1BDA7BCA0030191F /* HallOfTheMountainKing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11008DF81BDA7BCA0030191F /* HallOfTheMountainKing.mp3 */; settings = {ASSET_TAGS = (); }; };
+		11008DFC1BDA7BCA0030191F /* SecondBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11008DF91BDA7BCA0030191F /* SecondBeep.wav */; settings = {ASSET_TAGS = (); }; };
+		11008E001BDA7BD30030191F /* ButtonTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11008DFD1BDA7BD30030191F /* ButtonTap.wav */; settings = {ASSET_TAGS = (); }; };
+		11008E011BDA7BD30030191F /* HallOfTheMountainKing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11008DFE1BDA7BD30030191F /* HallOfTheMountainKing.mp3 */; settings = {ASSET_TAGS = (); }; };
+		11008E021BDA7BD30030191F /* SecondBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11008DFF1BDA7BD30030191F /* SecondBeep.wav */; settings = {ASSET_TAGS = (); }; };
 		FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */; };
 		FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B81BD1101A00F54057 /* ViewController.swift */; };
 		FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BA1BD1101A00F54057 /* Main.storyboard */; };
@@ -15,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11008DF71BDA7BCA0030191F /* ButtonTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonTap.wav; sourceTree = "<group>"; };
+		11008DF81BDA7BCA0030191F /* HallOfTheMountainKing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HallOfTheMountainKing.mp3; sourceTree = "<group>"; };
+		11008DF91BDA7BCA0030191F /* SecondBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SecondBeep.wav; sourceTree = "<group>"; };
+		11008DFD1BDA7BD30030191F /* ButtonTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonTap.wav; sourceTree = "<group>"; };
+		11008DFE1BDA7BD30030191F /* HallOfTheMountainKing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HallOfTheMountainKing.mp3; sourceTree = "<group>"; };
+		11008DFF1BDA7BD30030191F /* SecondBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SecondBeep.wav; sourceTree = "<group>"; };
 		FFD2F9B31BD1101A00F54057 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD2F9B81BD1101A00F54057 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +50,9 @@
 		FFD2F9AA1BD1101A00F54057 = {
 			isa = PBXGroup;
 			children = (
+				11008DF71BDA7BCA0030191F /* ButtonTap.wav */,
+				11008DF81BDA7BCA0030191F /* HallOfTheMountainKing.mp3 */,
+				11008DF91BDA7BCA0030191F /* SecondBeep.wav */,
 				FFD2F9B51BD1101A00F54057 /* Translate */,
 				FFD2F9B41BD1101A00F54057 /* Products */,
 			);
@@ -54,6 +69,9 @@
 		FFD2F9B51BD1101A00F54057 /* Translate */ = {
 			isa = PBXGroup;
 			children = (
+				11008DFD1BDA7BD30030191F /* ButtonTap.wav */,
+				11008DFE1BDA7BD30030191F /* HallOfTheMountainKing.mp3 */,
+				11008DFF1BDA7BD30030191F /* SecondBeep.wav */,
 				FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */,
 				FFD2F9B81BD1101A00F54057 /* ViewController.swift */,
 				FFD2F9BA1BD1101A00F54057 /* Main.storyboard */,
@@ -121,9 +139,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11008DFC1BDA7BCA0030191F /* SecondBeep.wav in Resources */,
 				FFD2F9C11BD1101A00F54057 /* LaunchScreen.storyboard in Resources */,
+				11008E011BDA7BD30030191F /* HallOfTheMountainKing.mp3 in Resources */,
 				FFD2F9BE1BD1101A00F54057 /* Assets.xcassets in Resources */,
+				11008DFA1BDA7BCA0030191F /* ButtonTap.wav in Resources */,
+				11008E001BDA7BD30030191F /* ButtonTap.wav in Resources */,
+				11008E021BDA7BD30030191F /* SecondBeep.wav in Resources */,
 				FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */,
+				11008DFB1BDA7BCA0030191F /* HallOfTheMountainKing.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +309,7 @@
 				FFD2F9C71BD1101A00F54057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
