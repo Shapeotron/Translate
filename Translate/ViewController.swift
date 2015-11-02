@@ -33,8 +33,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let str = textToTranslate.text
         let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let langStr2 = ("en|ty").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let langStr3 = ("en|eng-IE").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let langStr2 = ("en|tr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let langStr3 = ("en|ga").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
         let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
         let urlStr2:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr2!)
@@ -44,8 +44,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let url2 = NSURL(string: urlStr2)
         let url3 = NSURL(string: urlStr3)
         
-
-        let request = NSURLRequest(URL: url!)// Creating Http Request
+            //        if(row == 0){
+            //            request = NSURLRequest(URL: url!}
+            //        else if (row == 1{
+            //            request = NSURLRequest(URL: url2!}
+            //        else if (row == 2{
+            //            request = NSURLRequest(URL: url3!)}
+        
+          let request = NSURLRequest(URL: url3!)// Creating Http Request
 //        let request2 = NSURLRequest(URL: url2!)// Creating Http Request
   //      let request3 = NSURLRequest(URL: url3!)// Creating Http Request
         
@@ -144,13 +150,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
-        
     }
     
     // Catpure the picker view selection
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
+//        if(row == 0){
+//            request = NSURLRequest(URL: url!}
+//        if (row == 1{
+//            request = NSURLRequest(URL: url2!}
+//        else if (row == 2{
+//            request = NSURLRequest(URL: url3!)}
+        
         print(row)
     }
     
