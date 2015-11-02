@@ -8,31 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		11008DFA1BDA7BCA0030191F /* ButtonTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11008DF71BDA7BCA0030191F /* ButtonTap.wav */; settings = {ASSET_TAGS = (); }; };
-		11008DFB1BDA7BCA0030191F /* HallOfTheMountainKing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11008DF81BDA7BCA0030191F /* HallOfTheMountainKing.mp3 */; settings = {ASSET_TAGS = (); }; };
 		11008DFC1BDA7BCA0030191F /* SecondBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11008DF91BDA7BCA0030191F /* SecondBeep.wav */; settings = {ASSET_TAGS = (); }; };
-		11008E001BDA7BD30030191F /* ButtonTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11008DFD1BDA7BD30030191F /* ButtonTap.wav */; settings = {ASSET_TAGS = (); }; };
-		11008E011BDA7BD30030191F /* HallOfTheMountainKing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11008DFE1BDA7BD30030191F /* HallOfTheMountainKing.mp3 */; settings = {ASSET_TAGS = (); }; };
-		11008E021BDA7BD30030191F /* SecondBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11008DFF1BDA7BD30030191F /* SecondBeep.wav */; settings = {ASSET_TAGS = (); }; };
+		11AB69F11BE80153002EF7B9 /* Translate.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11AB69F01BE80153002EF7B9 /* Translate.wav */; settings = {ASSET_TAGS = (); }; };
+		11B298671BE79A2000BF3016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B298661BE79A2000BF3016 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		11B2986A1BE7A08B00BF3016 /* TD-App-Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B298681BE7A08B00BF3016 /* TD-App-Icon-Small.png */; settings = {ASSET_TAGS = (); }; };
+		11B2986B1BE7A08B00BF3016 /* TD-App-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B298691BE7A08B00BF3016 /* TD-App-Icon.png */; settings = {ASSET_TAGS = (); }; };
+		11B2986D1BE7B05E00BF3016 /* peteLawrence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11B2986C1BE7B05E00BF3016 /* peteLawrence.mp3 */; settings = {ASSET_TAGS = (); }; };
 		FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */; };
 		FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B81BD1101A00F54057 /* ViewController.swift */; };
 		FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BA1BD1101A00F54057 /* Main.storyboard */; };
 		FFD2F9BE1BD1101A00F54057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BD1BD1101A00F54057 /* Assets.xcassets */; };
-		FFD2F9C11BD1101A00F54057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BF1BD1101A00F54057 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11008DF71BDA7BCA0030191F /* ButtonTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonTap.wav; sourceTree = "<group>"; };
-		11008DF81BDA7BCA0030191F /* HallOfTheMountainKing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HallOfTheMountainKing.mp3; sourceTree = "<group>"; };
 		11008DF91BDA7BCA0030191F /* SecondBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SecondBeep.wav; sourceTree = "<group>"; };
-		11008DFD1BDA7BD30030191F /* ButtonTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonTap.wav; sourceTree = "<group>"; };
-		11008DFE1BDA7BD30030191F /* HallOfTheMountainKing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HallOfTheMountainKing.mp3; sourceTree = "<group>"; };
-		11008DFF1BDA7BD30030191F /* SecondBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SecondBeep.wav; sourceTree = "<group>"; };
+		11AB69F01BE80153002EF7B9 /* Translate.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Translate.wav; sourceTree = "<group>"; };
+		11B298661BE79A2000BF3016 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		11B298681BE7A08B00BF3016 /* TD-App-Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TD-App-Icon-Small.png"; sourceTree = "<group>"; };
+		11B298691BE7A08B00BF3016 /* TD-App-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TD-App-Icon.png"; sourceTree = "<group>"; };
+		11B2986C1BE7B05E00BF3016 /* peteLawrence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = peteLawrence.mp3; sourceTree = "<group>"; };
 		FFD2F9B31BD1101A00F54057 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD2F9B81BD1101A00F54057 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFD2F9BB1BD1101A00F54057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFD2F9BD1BD1101A00F54057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FFD2F9C01BD1101A00F54057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD2F9C21BD1101A00F54057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,8 +50,9 @@
 		FFD2F9AA1BD1101A00F54057 = {
 			isa = PBXGroup;
 			children = (
+				11AB69F01BE80153002EF7B9 /* Translate.wav */,
 				11008DF71BDA7BCA0030191F /* ButtonTap.wav */,
-				11008DF81BDA7BCA0030191F /* HallOfTheMountainKing.mp3 */,
+				11B2986C1BE7B05E00BF3016 /* peteLawrence.mp3 */,
 				11008DF91BDA7BCA0030191F /* SecondBeep.wav */,
 				FFD2F9B51BD1101A00F54057 /* Translate */,
 				FFD2F9B41BD1101A00F54057 /* Products */,
@@ -69,14 +70,13 @@
 		FFD2F9B51BD1101A00F54057 /* Translate */ = {
 			isa = PBXGroup;
 			children = (
-				11008DFD1BDA7BD30030191F /* ButtonTap.wav */,
-				11008DFE1BDA7BD30030191F /* HallOfTheMountainKing.mp3 */,
-				11008DFF1BDA7BD30030191F /* SecondBeep.wav */,
 				FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */,
 				FFD2F9B81BD1101A00F54057 /* ViewController.swift */,
+				11B298661BE79A2000BF3016 /* LaunchScreen.storyboard */,
 				FFD2F9BA1BD1101A00F54057 /* Main.storyboard */,
 				FFD2F9BD1BD1101A00F54057 /* Assets.xcassets */,
-				FFD2F9BF1BD1101A00F54057 /* LaunchScreen.storyboard */,
+				11B298681BE7A08B00BF3016 /* TD-App-Icon-Small.png */,
+				11B298691BE7A08B00BF3016 /* TD-App-Icon.png */,
 				FFD2F9C21BD1101A00F54057 /* Info.plist */,
 			);
 			path = Translate;
@@ -140,14 +140,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				11008DFC1BDA7BCA0030191F /* SecondBeep.wav in Resources */,
-				FFD2F9C11BD1101A00F54057 /* LaunchScreen.storyboard in Resources */,
-				11008E011BDA7BD30030191F /* HallOfTheMountainKing.mp3 in Resources */,
 				FFD2F9BE1BD1101A00F54057 /* Assets.xcassets in Resources */,
 				11008DFA1BDA7BCA0030191F /* ButtonTap.wav in Resources */,
-				11008E001BDA7BD30030191F /* ButtonTap.wav in Resources */,
-				11008E021BDA7BD30030191F /* SecondBeep.wav in Resources */,
+				11B2986D1BE7B05E00BF3016 /* peteLawrence.mp3 in Resources */,
+				11B2986B1BE7A08B00BF3016 /* TD-App-Icon.png in Resources */,
 				FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */,
-				11008DFB1BDA7BCA0030191F /* HallOfTheMountainKing.mp3 in Resources */,
+				11AB69F11BE80153002EF7B9 /* Translate.wav in Resources */,
+				11B298671BE79A2000BF3016 /* LaunchScreen.storyboard in Resources */,
+				11B2986A1BE7A08B00BF3016 /* TD-App-Icon-Small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,14 +172,6 @@
 				FFD2F9BB1BD1101A00F54057 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FFD2F9BF1BD1101A00F54057 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFD2F9C01BD1101A00F54057 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -272,6 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Translate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.wit.Translate;
@@ -283,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Translate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.wit.Translate;

@@ -18,38 +18,45 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var textToTranslate: UITextView!
     @IBOutlet weak var translatedText: UITextView!
+    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet var progressView: UIProgressView!
+    @IBOutlet weak var startCount: UIButton!
     
     @IBAction func translate(sender: AnyObject) {
         
-        backgroundMusic?.volume = 0.5
+        buttonBeep?.volume = 0.2
+        buttonBeep?.play()
+        backgroundMusic?.volume = 0.1
         backgroundMusic?.play()
         
-        buttonBeep?.play()
         
         let str = textToTranslate.text
         let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        
         let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        
-//        let langStr = ("en|ty").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        
-//        let langStr = ("en|eng-IE").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let langStr2 = ("en|ty").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let langStr3 = ("en|eng-IE").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
         let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
+        let urlStr2:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr2!)
+        let urlStr3:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr3!)
         
         let url = NSURL(string: urlStr)
+        let url2 = NSURL(string: urlStr2)
+        let url3 = NSURL(string: urlStr3)
         
+
         let request = NSURLRequest(URL: url!)// Creating Http Request
+//        let request2 = NSURLRequest(URL: url2!)// Creating Http Request
+  //      let request3 = NSURLRequest(URL: url3!)// Creating Http Request
+        
         
         //var data = NSMutableData()var data = NSMutableData()
         
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
         indicator.center = view.center
         view.addSubview(indicator)
         indicator.startAnimating()
-        
         var result = "<Translation Error>"
-        
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
             
             indicator.stopAnimating()
@@ -95,18 +102,22 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
-        if let buttonBeep = self.setupAudioPlayerWithFile("ButtonTap", type:"wav") {
+        
+        if let buttonBeep = self.setupAudioPlayerWithFile("Translate", type:"wav") {
             self.buttonBeep = buttonBeep
         }
         if let secondBeep = self.setupAudioPlayerWithFile("SecondBeep", type:"wav") {
             self.secondBeep = secondBeep
         }
-        if let backgroundMusic = self.setupAudioPlayerWithFile("HallOfTheMountainKing", type:"mp3") {
+        if let backgroundMusic = self.setupAudioPlayerWithFile("peteLawrence", type:"mp3") {
             self.backgroundMusic = backgroundMusic
         }
         
-        super.viewDidLoad()
+        
+
+        //progressView.setProgress(0, animated: true)
         // Connect data:
         self.picker.delegate = self
         self.picker.dataSource = self
@@ -140,11 +151,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
+        print(row)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
-      view.endEditing(true)
-    super.touchesBegan(touches, withEvent: event)
+        view.endEditing(true); super.touchesBegan(touches, withEvent: event)
     }
 }
-

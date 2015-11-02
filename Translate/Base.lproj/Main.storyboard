@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,13 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Translate" highlightedImage="Translate" translatesAutoresizingMaskIntoConstraints="NO" id="lL2-tY-d0k">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="100" constant="600" id="gLf-X8-YNS"/>
-                                </constraints>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&lt;Text to Translate&gt;" translatesAutoresizingMaskIntoConstraints="NO" id="dii-Vg-90N">
                                 <rect key="frame" x="20" y="28" width="560" height="128"/>
                                 <animations/>
@@ -105,6 +98,8 @@
                     </view>
                     <connections>
                         <outlet property="picker" destination="p5w-as-9rL" id="d3c-wr-YEF"/>
+                        <outlet property="progressView" destination="8bC-Xf-vdC" id="ooQ-Ks-NWp"/>
+                        <outlet property="startCount" destination="Tk9-7M-DEK" id="XNC-8Q-AFe"/>
                         <outlet property="textToTranslate" destination="dii-Vg-90N" id="MXf-pt-TjG"/>
                         <outlet property="translatedText" destination="LaV-KV-DTJ" id="fd7-Ru-8aa"/>
                     </connections>
@@ -115,7 +110,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Translate" width="474" height="421"/>
         <image name="button_tap_deselected" width="250" height="265"/>
         <image name="button_tap_selected" width="250" height="265"/>
     </resources>
