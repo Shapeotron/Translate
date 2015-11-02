@@ -64,27 +64,14 @@
                                     <constraint firstAttribute="width" constant="301" id="4LR-RZ-aJj"/>
                                 </constraints>
                             </pickerView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oB7-Ng-8Sl">
-                                <rect key="frame" x="225" y="183" width="150" height="3"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="rQM-2C-pka"/>
-                                </constraints>
-                                <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </progressView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LaV-KV-DTJ" firstAttribute="leading" secondItem="dii-Vg-90N" secondAttribute="leading" id="1I9-UQ-zeR"/>
-                            <constraint firstItem="oB7-Ng-8Sl" firstAttribute="centerX" secondItem="LaV-KV-DTJ" secondAttribute="centerX" id="3YV-YD-a72"/>
-                            <constraint firstItem="oB7-Ng-8Sl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-450" id="7ib-gm-xxZ"/>
                             <constraint firstItem="dii-Vg-90N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8IO-Lz-JKE"/>
                             <constraint firstItem="Tk9-7M-DEK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GUW-Qr-ubm"/>
                             <constraint firstItem="LaV-KV-DTJ" firstAttribute="top" secondItem="dii-Vg-90N" secondAttribute="bottom" constant="50" id="LTD-OY-g8P"/>
-                            <constraint firstItem="LaV-KV-DTJ" firstAttribute="top" secondItem="oB7-Ng-8Sl" secondAttribute="bottom" constant="21" id="M5R-4f-kcm"/>
                             <constraint firstAttribute="bottom" secondItem="Tk9-7M-DEK" secondAttribute="bottom" constant="20" symbolic="YES" id="P4Z-UM-mZY"/>
                             <constraint firstItem="p5w-as-9rL" firstAttribute="centerX" secondItem="Tk9-7M-DEK" secondAttribute="centerX" id="Paa-zt-L5T"/>
                             <constraint firstItem="Tk9-7M-DEK" firstAttribute="top" secondItem="p5w-as-9rL" secondAttribute="bottom" constant="15" id="Soc-fn-zNh"/>
@@ -93,7 +80,6 @@
                             <constraint firstItem="dii-Vg-90N" firstAttribute="trailing" secondItem="LaV-KV-DTJ" secondAttribute="trailing" id="l4y-8y-Mw1"/>
                             <constraint firstItem="LaV-KV-DTJ" firstAttribute="centerX" secondItem="Tk9-7M-DEK" secondAttribute="centerX" id="nxZ-oD-Bjx"/>
                             <constraint firstItem="p5w-as-9rL" firstAttribute="centerX" secondItem="dii-Vg-90N" secondAttribute="centerX" id="pq2-P1-65Z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oB7-Ng-8Sl" secondAttribute="trailing" constant="205" id="vO5-je-fFI"/>
                         </constraints>
                     </view>
                     <connections>
