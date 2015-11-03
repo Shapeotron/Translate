@@ -44,16 +44,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let url2 = NSURL(string: urlStr2)
         let url3 = NSURL(string: urlStr3)
         
-            //        if(row == 0){
+            //       if(pickerView == 0){
             //            request = NSURLRequest(URL: url!}
             //        else if (row == 1{
             //            request = NSURLRequest(URL: url2!}
             //        else if (row == 2{
             //            request = NSURLRequest(URL: url3!)}
         
-          let request = NSURLRequest(URL: url3!)// Creating Http Request
-//        let request2 = NSURLRequest(URL: url2!)// Creating Http Request
-  //      let request3 = NSURLRequest(URL: url3!)// Creating Http Request
+        let request = NSURLRequest(URL: url!)// Creating Http Request
+        let request2 = NSURLRequest(URL: url2!)// Creating Http Request
+        let request3 = NSURLRequest(URL: url3!)// Creating Http Request
         
         
         //var data = NSMutableData()var data = NSMutableData()
@@ -108,6 +108,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     override func viewDidLoad() {
+        
+        self.view.backgroundColor = UIColor.blueColor();
+        
         super.viewDidLoad()
         
         
@@ -121,8 +124,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             self.backgroundMusic = backgroundMusic
         }
         
-        
-
         //progressView.setProgress(0, animated: true)
         // Connect data:
         self.picker.delegate = self
@@ -156,12 +157,73 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
-//        if(row == 0){
-//            request = NSURLRequest(URL: url!}
-//        if (row == 1{
-//            request = NSURLRequest(URL: url2!}
-//        else if (row == 2{
-//            request = NSURLRequest(URL: url3!)}
+
+        /*
+        let str = textToTranslate.text
+        let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
+
+        let url = NSURL(string: urlStr)
+        
+        
+        if(row == 0){
+        let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
+        let url = NSURL(string: urlStr)
+        let request = NSURLRequest(URL: url!)
+        }
+        else if (row == 1){
+        let langStr2 = ("en|tr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let urlStr2:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr2!)
+        let url2 = NSURL(string: urlStr2)
+        let request = NSURLRequest(URL: url2!)
+        }
+        else if (row == 2){
+        let langStr3 = ("en|ga").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let urlStr3:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr3!)
+        let url3 = NSURL(string: urlStr3)
+        let request = NSURLRequest(URL: url3!)
+        }
+        
+        let request = NSURLRequest(URL: url!)// Creating Http Request
+        
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        indicator.center = view.center
+        view.addSubview(indicator)
+        indicator.startAnimating()
+        var result = "<Translation Error>"
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
+        
+        indicator.stopAnimating()
+        
+        if let httpResponse = response as? NSHTTPURLResponse {
+        if(httpResponse.statusCode == 200){
+        
+        let jsonDict: NSDictionary!=(try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)) as! NSDictionary
+        
+        if(jsonDict.valueForKey("responseStatus") as! NSNumber == 200){
+        let responseData: NSDictionary = jsonDict.objectForKey("responseData") as! NSDictionary
+        
+        result = responseData.objectForKey("translatedText") as! String
+        }
+        }
+        self.translatedText.text = result
+        }
+        }*/
+        
+        if(row == 0)
+        {
+            self.view.backgroundColor = UIColor.blueColor();
+        }
+        else if(row == 1)
+        {
+            self.view.backgroundColor = UIColor.redColor();
+        }
+        else if(row == 2)
+        {
+            self.view.backgroundColor =  UIColor.greenColor();
+        }
         
         print(row)
     }
