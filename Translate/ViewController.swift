@@ -44,13 +44,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let url2 = NSURL(string: urlStr2)
         let url3 = NSURL(string: urlStr3)
         
-            //       if(pickerView == 0){
-            //            request = NSURLRequest(URL: url!}
-            //        else if (row == 1{
-            //            request = NSURLRequest(URL: url2!}
-            //        else if (row == 2{
-            //            request = NSURLRequest(URL: url3!)}
-        
+/*      if(UIPickerView.selectRow(0)) {
+        let request = NSURLRequest(URL: url!)
+        }
+        if (UIPickerView.selectRow(1)){
+        let request = NSURLRequest(URL: url2!)
+        }
+        if (UIPickerView.selectRow(2)){
+        let request = NSURLRequest(URL: url3!)
+        }
+*/
         let request = NSURLRequest(URL: url!)// Creating Http Request
         let request2 = NSURLRequest(URL: url2!)// Creating Http Request
         let request3 = NSURLRequest(URL: url3!)// Creating Http Request
