@@ -64,6 +64,15 @@
                                     <constraint firstAttribute="width" constant="301" id="4LR-RZ-aJj"/>
                                 </constraints>
                             </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3v0-ez-Tfa">
+                                <rect key="frame" x="252" y="168" width="97" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="wpt-h3-RIv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,7 +85,9 @@
                             <constraint firstItem="p5w-as-9rL" firstAttribute="centerX" secondItem="Tk9-7M-DEK" secondAttribute="centerX" id="Paa-zt-L5T"/>
                             <constraint firstItem="Tk9-7M-DEK" firstAttribute="top" secondItem="p5w-as-9rL" secondAttribute="bottom" constant="15" id="Soc-fn-zNh"/>
                             <constraint firstItem="p5w-as-9rL" firstAttribute="top" secondItem="LaV-KV-DTJ" secondAttribute="bottom" constant="23" id="V8s-go-Dzw"/>
+                            <constraint firstItem="3v0-ez-Tfa" firstAttribute="centerX" secondItem="LaV-KV-DTJ" secondAttribute="centerX" id="dSd-VE-St6"/>
                             <constraint firstItem="dii-Vg-90N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dYF-2W-FQ1"/>
+                            <constraint firstItem="LaV-KV-DTJ" firstAttribute="top" secondItem="3v0-ez-Tfa" secondAttribute="bottom" constant="8" symbolic="YES" id="eOo-hy-bYI"/>
                             <constraint firstItem="dii-Vg-90N" firstAttribute="trailing" secondItem="LaV-KV-DTJ" secondAttribute="trailing" id="l4y-8y-Mw1"/>
                             <constraint firstItem="LaV-KV-DTJ" firstAttribute="centerX" secondItem="Tk9-7M-DEK" secondAttribute="centerX" id="nxZ-oD-Bjx"/>
                             <constraint firstItem="p5w-as-9rL" firstAttribute="centerX" secondItem="dii-Vg-90N" secondAttribute="centerX" id="pq2-P1-65Z"/>
@@ -86,6 +97,7 @@
                         <outlet property="picker" destination="p5w-as-9rL" id="d3c-wr-YEF"/>
                         <outlet property="progressView" destination="8bC-Xf-vdC" id="ooQ-Ks-NWp"/>
                         <outlet property="startCount" destination="Tk9-7M-DEK" id="XNC-8Q-AFe"/>
+                        <outlet property="textField" destination="3v0-ez-Tfa" id="4cV-c4-oSp"/>
                         <outlet property="textToTranslate" destination="dii-Vg-90N" id="MXf-pt-TjG"/>
                         <outlet property="translatedText" destination="LaV-KV-DTJ" id="fd7-Ru-8aa"/>
                     </connections>

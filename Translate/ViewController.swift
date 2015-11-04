@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet var progressView: UIProgressView!
     @IBOutlet weak var startCount: UIButton!
+    @IBOutlet weak var textField: UITextField!
     
     @IBAction func translate(sender: AnyObject) {
         
@@ -29,37 +30,28 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         backgroundMusic?.volume = 0.1
         backgroundMusic?.play()
         
+
+        var langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+
+    
+        if(textField.text == "French"){
+            langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        }
+        else if(textField.text == "Turkish"){
+            langStr = ("en|tr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        }
+        else if(textField.text == "Irish"){
+            langStr = ("en|ga").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        }
+        else if(textField.text == "UAE"){
+            langStr = ("en|ar").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        }
         
         let str = textToTranslate.text
         let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let langStr2 = ("en|tr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let langStr3 = ("en|ga").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        
         let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
-        let urlStr2:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr2!)
-        let urlStr3:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr3!)
-        
         let url = NSURL(string: urlStr)
-        let url2 = NSURL(string: urlStr2)
-        let url3 = NSURL(string: urlStr3)
-        
-/*      if(UIPickerView.selectRow(0)) {
-        let request = NSURLRequest(URL: url!)
-        }
-        if (UIPickerView.selectRow(1)){
-        let request = NSURLRequest(URL: url2!)
-        }
-        if (UIPickerView.selectRow(2)){
-        let request = NSURLRequest(URL: url3!)
-        }
-*/
         let request = NSURLRequest(URL: url!)// Creating Http Request
-        let request2 = NSURLRequest(URL: url2!)// Creating Http Request
-        let request3 = NSURLRequest(URL: url3!)// Creating Http Request
-        
-        
-        //var data = NSMutableData()var data = NSMutableData()
         
         let indicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
         indicator.center = view.center
@@ -113,6 +105,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         
         self.view.backgroundColor = UIColor.blueColor();
+        textField.text = "French"
         
         super.viewDidLoad()
         
@@ -133,7 +126,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.picker.dataSource = self
         
         // Input data into the Array:
-        pickerData = ["French", "Turkish", "Irish"]
+        pickerData = ["French", "Turkish", "Irish", "UAE"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -158,62 +151,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // Catpure the picker view selection
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // This method is triggered whenever the user makes a change to the picker selection.
-        // The parameter named row and component represents what was selected.
 
-        /*
-        let str = textToTranslate.text
-        let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
-
-        let url = NSURL(string: urlStr)
-        
-        
-        if(row == 0){
-        let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
-        let url = NSURL(string: urlStr)
-        let request = NSURLRequest(URL: url!)
-        }
-        else if (row == 1){
-        let langStr2 = ("en|tr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let urlStr2:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr2!)
-        let url2 = NSURL(string: urlStr2)
-        let request = NSURLRequest(URL: url2!)
-        }
-        else if (row == 2){
-        let langStr3 = ("en|ga").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let urlStr3:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr3!)
-        let url3 = NSURL(string: urlStr3)
-        let request = NSURLRequest(URL: url3!)
-        }
-        
-        let request = NSURLRequest(URL: url!)// Creating Http Request
-        
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
-        indicator.center = view.center
-        view.addSubview(indicator)
-        indicator.startAnimating()
-        var result = "<Translation Error>"
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
-        
-        indicator.stopAnimating()
-        
-        if let httpResponse = response as? NSHTTPURLResponse {
-        if(httpResponse.statusCode == 200){
-        
-        let jsonDict: NSDictionary!=(try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)) as! NSDictionary
-        
-        if(jsonDict.valueForKey("responseStatus") as! NSNumber == 200){
-        let responseData: NSDictionary = jsonDict.objectForKey("responseData") as! NSDictionary
-        
-        result = responseData.objectForKey("translatedText") as! String
-        }
-        }
-        self.translatedText.text = result
-        }
-        }*/
+        textField.text = pickerData[row]
         
         if(row == 0)
         {
@@ -226,6 +165,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         else if(row == 2)
         {
             self.view.backgroundColor =  UIColor.greenColor();
+        }
+        else if(row == 3)
+        {
+            self.view.backgroundColor =  UIColor.whiteColor();
         }
         
         print(row)
