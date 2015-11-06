@@ -51,6 +51,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
         let url = NSURL(string: urlStr)
         let request = NSURLRequest(URL: url!)// Creating Http Request
+       
+        /*
+        NSURLSession * session = [NSURLSession, sharedSession];
+        [[session dataTaskWithURL:[NSURL URLWithString:urlStr]
+            completionHandler:^(NSData *data,
+            NSURLResponse *response,
+            NSError *error) {
+            // handle response
+            
+            }] resume];
+        */
+        
         
         let indicator = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
         indicator.frame = CGRectMake(0.0, 0.0, 35.0, 35.0);
@@ -74,6 +86,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         indicator.startAnimating()
         
         var result = "<Translation Error>"
+        
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
             
             indicator.stopAnimating()
