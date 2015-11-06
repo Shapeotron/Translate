@@ -11,7 +11,8 @@ import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     
-    
+    let synth = AVSpeechSynthesizer()
+    var myUtterance = AVSpeechUtterance(string: "")
     var buttonBeep : AVAudioPlayer?
     var secondBeep : AVAudioPlayer?
     var backgroundMusic : AVAudioPlayer?
@@ -30,10 +31,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         backgroundMusic?.volume = 0.1
         backgroundMusic?.play()
         
-
+        
         var langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-
-    
+        
         if(textField.text == "French"){
             langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         }
@@ -79,6 +79,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         
     }
+    
+    @IBAction func textToSpeech(sender: UIButton) {
+        myUtterance = AVSpeechUtterance(string: translatedText.text)
+        myUtterance.rate = 0.4
+        synth.speakUtterance(myUtterance)
+    }
     //var data = NSMutableData()
     @IBOutlet weak var picker: UIPickerView!
     
@@ -106,6 +112,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         self.view.backgroundColor = UIColor.blueColor();
         textField.text = "French"
+        
         
         super.viewDidLoad()
         
@@ -151,7 +158,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // Catpure the picker view selection
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-
+        
         textField.text = pickerData[row]
         
         if(row == 0)
