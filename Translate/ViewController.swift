@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Translate
 //
-//  Created by Robert O'Connor on 16/10/2015.
+//  Created by David O'Leary on 6/11/2015.
 //  Copyright © 2015 WIT. All rights reserved.
 //
 
@@ -23,7 +23,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet var progressView: UIProgressView!
     @IBOutlet weak var startCount: UIButton!
     @IBOutlet weak var textField: UITextField!
-    
     @IBAction func translate(sender: AnyObject) {
         
         buttonBeep?.volume = 0.2
@@ -93,8 +92,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 self.translatedText.text = result
             }
         }
-        
-        
     }
     
     @IBAction func textToSpeech(sender: UIButton) {
@@ -102,20 +99,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         myUtterance.rate = 0.4
         synth.speakUtterance(myUtterance)
     }
-    //var data = NSMutableData()
+
     @IBOutlet weak var picker: UIPickerView!
     
     var pickerData: [String] = [String]()
     
     func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer?  {
-        //1
+
         let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
         let url = NSURL.fileURLWithPath(path!)
-        
-        //2
         var audioPlayer:AVAudioPlayer?
         
-        // 3
         do {
             try audioPlayer = AVAudioPlayer(contentsOfURL: url)
         } catch {
@@ -143,37 +137,29 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if let backgroundMusic = self.setupAudioPlayerWithFile("peteLawrence", type:"mp3") {
             self.backgroundMusic = backgroundMusic
         }
-        
-        //progressView.setProgress(0, animated: true)
-        // Connect data:
+
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        // Input data into the Array:
         pickerData = ["French", "Turkish", "Irish", "UAE"]
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    // The number of columns of data
+
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    // The number of rows of data
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
     }
-    
-    // The data to return for the row and component (column) that's being passed in
+
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
-    
-    // Catpure the picker view selection
+
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         textField.text = pickerData[row]
