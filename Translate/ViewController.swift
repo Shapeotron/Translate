@@ -53,10 +53,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let url = NSURL(string: urlStr)
         let request = NSURLRequest(URL: url!)// Creating Http Request
         
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+        indicator.frame = CGRectMake(0.0, 0.0, 35.0, 35.0);
+        
+        if(textField.text == "French"){
+            indicator.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0.8, alpha: 0.5)
+        }
+        else if(textField.text == "Turkish"){
+            indicator.backgroundColor = UIColor.init(red: 0.8, green: 0, blue: 0, alpha: 0.5)
+        }
+        else if(textField.text == "Irish"){
+            indicator.backgroundColor = UIColor.init(red: 0, green: 0.8, blue: 0, alpha: 0.5)
+        }
+        else if(textField.text == "UAE"){
+            indicator.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
+        }
+
+        indicator.layer.cornerRadius = 10.0;
         indicator.center = view.center
         view.addSubview(indicator)
         indicator.startAnimating()
+        
         var result = "<Translation Error>"
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
             
